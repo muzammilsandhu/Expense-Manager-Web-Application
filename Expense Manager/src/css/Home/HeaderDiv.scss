@@ -1,0 +1,16 @@
+.bg-img {
+  background-image: url("../../Images/banner.jpg");
+  height: 575px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #0b192bc0;
+  background-blend-mode: darken;
+}
+
+@media (max-width: 992px) {
+  .bg-img {
+    height: auto;
+    padding-bottom: 20px;
+  }
+}

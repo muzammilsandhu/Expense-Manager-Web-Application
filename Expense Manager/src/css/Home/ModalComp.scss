@@ -1,0 +1,128 @@
+@import "../variables.scss";
+
+$blue-color: #105e7c;
+
+.modal-comp {
+  .modal-content {
+    margin-top: 40px !important;
+  }
+
+  .modal-header {
+    display: inline-block !important;
+    padding: 60px 50px 10px 50px !important;
+    background: linear-gradient(
+      to bottom,
+      rgba(177, 226, 244, 0.8),
+      rgba(131, 201, 235, 0.8)
+    );
+    .modal-title {
+      display: inline-block;
+      font-weight: bold;
+    }
+    h4 {
+      padding-top: 20px;
+      font-weight: 400;
+      span {
+        color: $blue-color;
+        font-weight: 500;
+      }
+    }
+    ul {
+      li {
+        padding-bottom: 5px;
+        span {
+          color: $blue-color;
+          font-weight: 500;
+          font-size: 14px;
+        }
+        &::marker {
+          color: $blue-color;
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+
+  .modal-90w {
+    width: 510px;
+  }
+
+  .modal-body {
+    padding: 20px 30px 10px 30px !important;
+    p {
+      text-align: center;
+      font-size: 13px;
+      font-weight: bold;
+      color: #7e7d7d;
+    }
+    .form-control:focus {
+      border-color: none;
+      box-shadow: none;
+    }
+    .form-label {
+      font-weight: 500;
+    }
+    a {
+      float: right;
+      text-decoration: none;
+      font-size: 13px;
+      color: $primary-color;
+      font-weight: 500;
+    }
+    input {
+      border-radius: 5px;
+      width: 68%;
+      padding: 8px;
+      display: inline-block;
+    }
+    .parent-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .google-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 2px solid #e6e7ea;
+    }
+  }
+}
+
+// @media (max-width: 600px) {
+//   .modal-comp {
+//     width: 80% !important;
+//     margin-left: 30px;
+//     h4 {
+//       font-size: 20px;
+//     }
+//     .modal-header {
+//       padding: 30px !important;
+//       width: 90%;
+//       img {
+//         width: 50px;
+//         height: 40px;
+//       }
+//       .modal-title {
+//         font-size: 20px;
+//       }
+//       h4 {
+//         font-size: 20px;
+        
+//       }
+//     }
+//     .modal-body {
+//       width: 80%;
+//       input {
+//         width: 100%;
+//       }
+//       .continue-btn {
+//         margin-top: 10px !important;
+//       }
+//     }
+//   }
+// }

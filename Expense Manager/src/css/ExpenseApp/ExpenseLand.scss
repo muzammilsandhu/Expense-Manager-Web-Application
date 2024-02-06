@@ -1,0 +1,111 @@
+$white-color: #fff;
+$green-color: #82f08e;
+$orange-color: #e7784f;
+$gray-color: #e2e1e4;
+
+.main-expense-div {
+  background: #181d1f;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0 20px 20px;
+
+  .expense-header {
+    h5,
+    p {
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    h5 {
+      color: $white-color;
+    }
+
+    p {
+      color: $gray-color;
+    }
+
+    .btn-div {
+      button {
+        padding: 8px 35px;
+        border-radius: 12px;
+        border: none;
+        font-size: 17px;
+
+        &.income-btn {
+          color: $green-color;
+          background-color: #274038;
+        }
+
+        &.expense-btn {
+          color: $orange-color;
+          background-color: #3b2f2c;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+
+        &.transfer-btn {
+          color: $white-color;
+          background-color: #3c4143;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1281px) {
+  .expense-header {
+    .col-4 {
+      flex: 0 0 16.666667%;
+      max-width: 16.666667%;
+    }
+    .col-5 {
+      flex: 0 0 58.333333%;
+      max-width: 58.333333%;
+    }
+  }
+
+  .expense-header {
+    img, h5, p {
+      display: none !important;
+    }
+  }
+}
+
+@media (max-width: 1245px) {
+  .btn-div {
+    span {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .expense-header {
+    h5,
+    p {
+      display: none !important;
+    }
+  }
+  .icon-div {
+    .help-icon,
+    .history-icon {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .btn-div {
+    button {
+      padding: 5px 20px !important;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .btn-div {
+    button {
+      padding: 5px 10px !important;
+    }
+  }
+}

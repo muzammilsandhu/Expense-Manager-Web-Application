@@ -1,0 +1,90 @@
+@import "../variables.scss";
+
+$gray-color: #7a7777;
+
+.navbar {
+  box-shadow: rgb(0 0 0 / 16%) 0px 4px 8px 0px;
+  height: 76px;
+  h4 {
+    display: inline;
+    margin-left: 10px;
+    color: $white-color;
+  }
+  .navbar-nav {
+    a {
+      color: $white-color;
+      font-size: 17px !important;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-left: 20px;
+      margin-right: 20px;
+      &:hover,
+      &:active,
+      &:focus {
+        color: rgb(96, 151, 162) !important;
+        transition: color 500ms ease-in-out 0s;
+      }
+    }
+  }
+}
+.sign-btn {
+  background: $linear-gradient;
+  color: rgb(255, 255, 255);
+  border: none;
+  margin-left: 20px;
+  padding: 12px 20px;
+  border-radius: 5px;
+}
+
+.navbar-scroll {
+  background-color: $white-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  h4 {
+    color: $gray-color;
+  }
+  .nav-link {
+    color: $gray-color !important;
+  }
+  .toggle-icon {
+    background-color: $primary-color;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    .nav-link {
+      font-size: 15px !important;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  .navbar-collapse.show {
+    background-color: #fff;
+    padding-bottom: 20px;
+    .nav-link {
+      color: #000 !important;
+    }
+    .sign-btn {
+      margin: 0;
+    }
+  }
+  .sign-btn {
+    margin-left: 10px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 356px) {
+  .navbar-brand {
+    h4 {
+      display: none;
+    }
+  }
+}

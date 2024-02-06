@@ -1,0 +1,115 @@
+@import "../variables.scss";
+
+.blue-div {
+  background: rgb(11, 26, 47);
+  height: auto;
+  padding-bottom: 80px;
+}
+
+.line-div {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  h1 {
+    color: $white-color;
+    font-weight: bolder;
+  }
+}
+
+.line-left {
+  border-radius: 18px;
+  background: $primary-color;
+  margin-bottom: 15px;
+  width: 52px;
+  height: 10px;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.card-style {
+  margin-right: 23px !important;
+  border: none;
+  border-radius: 5px;
+  ul {
+    li {
+      font-size: 18px;
+    }
+  }
+  ul li::marker {
+    color: $primary-color;
+    font-size: 20px;
+  }
+}
+
+.card-title {
+  font-size: 25px;
+  font-weight: 600;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.card-body {
+  background: rgb(21, 34, 53);
+  color: $white-color;
+  box-shadow: rgb(0 0 0 / 25%) 30px 30px 30px 5px;
+}
+
+.blue-div {
+  h2 {
+    color: $white-color;
+    font-weight: bolder;
+    margin-top: 70px;
+  }
+  button {
+    @include Button;
+  }
+}
+
+@media (max-width: 1024px) {
+  .blue-div {
+    padding-bottom: 50px;
+  }
+  .line-div {
+    h1 {
+      font-size: 25px;
+      font-weight: 600;
+    }
+  }
+  .card-style {
+    margin-right: 14px !important;
+
+    ul {
+      li {
+        font-size: 14px;
+      }
+    }
+  }
+  .card-title {
+    font-size: 18px;
+  }
+  .blue-div {
+    h2 {
+      font-size: 18px;
+      font-weight: normal;
+    }
+    button {
+      padding: 20px 30px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 22px;
+  }
+  .card-style {
+    margin-right: 0 !important;
+
+    ul {
+      li {
+        font-size: 18px;
+      }
+    }
+  }
+}

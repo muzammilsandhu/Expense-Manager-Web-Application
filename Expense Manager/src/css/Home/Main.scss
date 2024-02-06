@@ -1,0 +1,153 @@
+@import "../variables.scss";
+
+.main_div {
+  padding-top: 120px;
+  padding-bottom: 50px;
+
+  .main-right-div {
+    .main-div-row {
+      margin-left: 100px;
+      margin-top: 20px;
+    }
+    .click-div {
+      position: relative;
+      color: $gray-color;
+      font-size: 18px;
+      cursor: pointer;
+      padding: 12px;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 50%;
+        height: 5px;
+      }
+      &::before {
+        left: 0;
+      }
+      &::after {
+        right: 0;
+      }
+      &.active {
+        font-weight: bold;
+
+        &::before,
+        &::after {
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .business-h {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .business-btn {
+    @include Button;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@mixin content {
+  margin-left: 120px;
+  margin-top: 70px;
+  h1 {
+    font-weight: bolder;
+    span {
+      color: $primary-color;
+    }
+  }
+  p {
+    color: $gray-color;
+    font-size: 18px;
+    margin-top: 30px;
+  }
+  button {
+    @include Button;
+  }
+}
+
+.policies-content {
+  @include content;
+}
+
+.reports-content {
+  @include content;
+}
+
+.forms-content {
+  @include content;
+}
+
+@media (max-width: 1024px) {
+  .main_div {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    .main-right-div {
+      .main-div-row {
+        margin-left: 0px;
+      }
+    }
+  }
+
+  .click-div {
+    font-size: 16px !important;
+  }
+
+  @mixin content-media {
+    margin-left: 0;
+    margin-top: 40px;
+    h1 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 16px;
+    }
+    button {
+      padding: 12px 50px;
+      margin-top: 15px;
+      font-size: 18px;
+    }
+  }
+  .policies-content {
+    @include content-media;
+  }
+  .reports-content {
+    @include content-media;
+  }
+  .forms-content {
+    @include content-media;
+  }
+}
+
+@media (max-width: 768px) {
+  .main_div {
+    img {
+      width: 90%;
+      height: 90%;
+    }
+    .main-right-div {
+      .main-div-row {
+        margin-top: 0;
+      }
+    }
+    .business-h {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .main_div {
+    padding-bottom: 50px;
+    button {
+      padding: 12px 50px;
+    }
+  }
+}

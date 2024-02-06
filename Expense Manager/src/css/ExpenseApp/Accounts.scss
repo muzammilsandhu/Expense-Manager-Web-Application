@@ -1,0 +1,121 @@
+@import "../variables";
+
+$light-gray: #f1f6f9;
+
+.accounts-main-div {
+  display: flex;
+  overflow-x: hidden;
+  .left-accounts-div {
+    width: 20%;
+    min-width: 302px;
+    height: 625px;
+    padding: 30px 40px;
+    background-color: #edf4f7;
+    p {
+      font-size: 14px;
+      color: #5c5e5f;
+      font-weight: 400;
+      margin-bottom: 5px;
+    }
+    h3 {
+      font-weight: bolder;
+      margin-left: 5px;
+    }
+    .line-accounts {
+      width: 100%;
+      margin: 20px auto;
+      border-top: 1px solid #ccc;
+    }
+    h6 {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    .faPlus {
+      float: right;
+      color: $primary-color;
+      font-size: 18px;
+    }
+    .my-accounts p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  .right-accounts-div {
+    .nav-div {
+      padding: 30px 0 30px 30px;
+      .button {
+        text-decoration: none;
+        border: none;
+        border-radius: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        background: none;
+        color: #a8a8a8;
+        padding: 8px 20px;
+      }
+      .active-link {
+        background-color: #181d1f !important;
+        color: #fff !important;
+      }
+    }
+  }
+  
+}
+
+.bars-d-icon {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  cursor: pointer;
+  color: #a2a5a5;
+  top: 35px;
+  left: 20px;
+  font-size: 20px;
+}
+
+@media (max-width: 1280px) {
+  .accounts-main-div {
+    flex-direction: column;
+  }
+  .left-accounts-div {
+    width: 21%;
+    position: absolute;
+    z-index: 1;
+    height: 80%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 30px 40px;
+  }
+  .bars-d-icon {
+    display: inline-block !important;
+  }
+  .accounts-main-div.show-left-div .left-accounts-div {
+    transform: translateX(0%);
+  }
+  .accounts-main-div.show-left-div .bars-d-icon {
+    left: calc(30% + 20px);
+  } 
+}
+
+@media (max-width: 768px) {
+  .accounts-main-div{
+    .right-accounts-div{
+      .nav-div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    } 
+  }
+}
+
+@media (max-width: 500px) {
+  .left-accounts-div {
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    padding: 40px;
+  }
+}

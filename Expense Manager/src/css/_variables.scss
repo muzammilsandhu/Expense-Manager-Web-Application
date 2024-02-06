@@ -1,0 +1,15 @@
+$primary-color: #4b95cd;
+$linear-gradient: linear-gradient(90deg, rgb(22, 65, 171), rgb(96, 151, 162));
+$white-color: #fff;
+$gray-color: #353434;
+
+@mixin Button {
+  background: $linear-gradient;
+  color: $white-color;
+  border: none;
+  padding: 18px 80px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
